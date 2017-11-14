@@ -10,14 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114165621) do
+ActiveRecord::Schema.define(version: 20171114191857) do
+
+  create_table "order_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "payment_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_types", force: :cascade do |t|
+    t.string "product_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "title"
-    t.string "catergory"
+    t.string "category"
     t.string "type"
-    t.integer "price"
-    t.boolean "delevery"
+    t.float "price"
+    t.boolean "delivery"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
