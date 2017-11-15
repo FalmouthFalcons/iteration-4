@@ -19,9 +19,11 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
- 
+     <%= form.label :category %><br>
+
+  <%= form.select :category, Product.all.collect { |p| [ p.category, p.id ] }, include_blank: true %>
+
   <p>
-    <%= form.label :category %><br>
     <%= form.text_area :category %>
   </p>
  
