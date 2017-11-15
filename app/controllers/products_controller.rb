@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
 
     # makes new instance for new products that is referd to in the view.
-    def new 
+    def new
         @product = Product.new
-    end 
+        @products = Product.all
+    end
     # "create" lets you take in new params and save them to database.
     def create
         @user = User.find(session[:user_id])
@@ -12,10 +13,10 @@ class ProductsController < ApplicationController
         if @product.save
         redirect_to @product
         # "else" makes sure product params are satisfied, will not let you save invalid data to database.
-        else 
+        else
             render 'new'
         end
-    end 
+    end
 
     def index
         @product = Product.all
