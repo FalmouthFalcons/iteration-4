@@ -21,11 +21,8 @@
   </p>
      <%= form.label :category %><br>
 
-  <%= form.select :category, Product.all.collect { |p| [ p.category, p.id ] }, include_blank: true %>
+  <%= form.select :category, Product.all.collect { |p| [ p.category, p.category ] }, include_blank: true %>
 
-  <p>
-    <%= form.text_area :category %>
-  </p>
  
  <p>
     <%= form.label :type %><br>
