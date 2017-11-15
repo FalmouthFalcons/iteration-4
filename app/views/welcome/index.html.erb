@@ -3,9 +3,16 @@
 
 <div id="user_header">
   <% if logged_in? %>
+    <%= link_to 'Buy/Sell Products', products_path %>
+    <br>
+   
     <%= link_to 'Logout', logout_path %>
+
   <% else %>
     <%= link_to "Sign Up", signup_path %>
+    <br>
     <%= link_to "Log In", login_path %>
+     <br>
+    <%= link_to 'View Products', products_path %>
   <% end %>
 </div>
