@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ .nav_height {
+     min-height: 66px;
+ }
+ body {
+     margin-right: 30px;
+ }
+.move_right {
+    padding-left: 32px;
+}
+ 
+.white {
+    color: white;
+    display: inline;
+}
+
+ h1 {
+     padding-left: 22px;
+ }
+ table {
+     margin-left: 32px;
+ }
+
+ form {
+    margin-left: 22px;
+    margin-top: 22px;
+ }
+
+ td {
+    padding: 0px 16px 0px 0px;
+    text-align: left;
+ }
+
+ th {
+    padding: 0px 16px 0px 0px;
+    text-align: left;
+ }
