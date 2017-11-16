@@ -20,10 +20,15 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
-     <%= form.label :category %><br>
 
-  <%= form.select :category, Product.all.collect { |p| [ p.category, p.category ] }, include_blank: false %>
+  <p>
+    <%= form.file_field :product_image %>
+  </p>
+
+  <%= form.label :category %><br>
+  <%= form.select :category, Product.all.collect { |p| [ p.category, p.category ] }, include_blank: true %>
 <br><br>
+
  <p>
     <%= form.label :description %><br>
     <%= form.text_area :description, :cols => "40", :rows => "2" %>
@@ -50,7 +55,7 @@
   </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit 'Sell' %>
   </p>
- 
+
 <% end %>
