@@ -1,4 +1,7 @@
 Rails.application.configure do
+  Paperclip.options[:command_path] = "/usr/local/bin/convert"
+
+  config.serve_static_assets = true
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
