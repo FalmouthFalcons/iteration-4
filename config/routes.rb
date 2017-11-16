@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+  resources :payment_types
   resources :products do
     get 'categoryshow'
   end

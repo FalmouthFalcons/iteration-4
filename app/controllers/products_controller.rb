@@ -14,9 +14,11 @@ class ProductsController < ApplicationController
         if @product.save
             redirect_to @product
         # "else" makes sure product params are satisfied, will not let you save invalid data to database.
+
         else
             flash[:error] = "Please select a category in order to submit."
             render :new
+
         end
     end
 
