@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
+  validates :title, :delivery,  presence: true
+  validates :price, numericality: true
   validates_presence_of :category
 
   has_attached_file :product_image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
