@@ -1,7 +1,9 @@
-<%= link_to 'back', products_path %>
 <br>
-<%= @product.title %>
-<%= @product.category %>
+<%= link_to 'back', products_path, :class => "move_right" %>
+<br>
+<p class="move_right"><%= @product.title %> </p>
+<p class="move_right"><%= @product.category %> </p>
+<p class="move_right"><%= @product.description %> </p>
 
 
 
