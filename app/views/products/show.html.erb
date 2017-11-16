@@ -1,10 +1,19 @@
 <br>
 <%= link_to 'back', products_path, :class => "move_right" %>
 <br>
-<p class="move_right"><%= @product.title %> </p>
-<p class="move_right"><%= @product.category %> </p>
-<p class="move_right"><%= @product.description %> </p>
 
+<h3>Add To Cart</h3>
 
+<%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 
+    <%=hidden_field(:product, :id)%>
+   
+    <p class="move_right"><%= @product.title %> </p>
+    <p class="move_right"><%= @product.category %> </p>
+    <p class="move_right"><%= @product.description %> </p>
 
+    <p>
+        <%= form.submit %>
+    </p>
+
+<% end %>
