@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :products
+  resources :products do
+    get 'categoryshow'
+  end
 
 
   get 'signup', to: 'users#new', as: 'signup'
