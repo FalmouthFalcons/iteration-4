@@ -1,4 +1,5 @@
- <%= link_to 'Buy/Sell Products', products_path %>
+<br>
+<h1>List Product for Sale</h1>
 <%= form_with model: @product, local: true do |form| %>
 
 <% if @product.errors.any? %>
@@ -19,30 +20,33 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
- 
-  <p>
-    <%= form.label :category %><br>
-    <%= form.text_area :category %>
+     <%= form.label :category %><br>
+
+  <%= form.select :category, Product.all.collect { |p| [ p.category, p.category ] }, include_blank: false %>
+<br><br>
+ <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description, :cols => "40", :rows => "2" %>
   </p>
- 
+
  <p>
     <%= form.label :type %><br>
-    <%= form.text_area :type %>
+    <%= form.text_field :type %>
   </p>
 
   <p>
     <%= form.label :price %><br>
-    <%= form.text_area :price %>
+    <%= form.text_field :price %>
   </p>
 
   <p>
     <%= form.label :delivery %><br>
-    <%= form.text_area :delivery %>
+    <%= form.text_field :delivery %>
   </p>
 
   <p>
     <%= form.label :city %><br>
-    <%= form.text_area :city %>
+    <%= form.text_field :city %>
   </p>
 
   <p>

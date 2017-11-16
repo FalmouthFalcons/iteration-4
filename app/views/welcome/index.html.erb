@@ -1,9 +1,12 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<h1>Falmouth Falcons Buy and Sell Store</h1>
 
-<div id="user_header">
+<div id="user_header" class="move_right">
   <% if logged_in? %>
     <%= link_to 'Buy/Sell Products', products_path %>
+    </br>
+    <%= link_to 'Submit Product to Sell', new_product_url%>
+
     <br>
    
     <%= link_to 'Logout', logout_path %>
