@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
         redirect_to @product
         # "else" makes sure product params are satisfied, will not let you save invalid data to database.
         else 
-            render 'new'
+            render new
         end
     end 
 

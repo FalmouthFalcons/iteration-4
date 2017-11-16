@@ -1,0 +1,9 @@
+<%= form_with model: payment_type, :url => {:action => "create"}, local: true do |form| %>
+    <p>
+    <%= form.label :payment %><br>
+    <%= form.text_field :payment %><br>
+    <%= form.label :account_number%><br>
+    <%= form.text_field :account_number %><br>
+    <%= form.submit "Add Payment " %>
+  </p>
+<% end %>
