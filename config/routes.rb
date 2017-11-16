@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :products
+  resources :payment_types
 
 
   get 'signup', to: 'users#new', as: 'signup'
