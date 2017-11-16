@@ -31,13 +31,13 @@ class ProductsController < ApplicationController
 
     # method for category listings
     def categoryshow
-       
+
     end
 
     # makes sure the product_params are not accesable to user.
     private
     def product_params
-        params.require(:product).permit(:title, :category, :type, :price, :delivery, :city, :description)
+        params.require(:product).permit(:title, :category, :type, :price, :delivery, :city, :description, :product_image)
     end
 
 end
