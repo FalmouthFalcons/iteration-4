@@ -4,13 +4,15 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+
+.DS_Store
+
 # Ignore bundler config.
 /.bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -21,3 +23,5 @@
 /yarn-error.log
 
 .byebug_history
+
+20171115163256_change_column_name.rb

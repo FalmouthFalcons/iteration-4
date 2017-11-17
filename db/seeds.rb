@@ -16,7 +16,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Product.destroy_all
+# Product.destroy_all
 
 Product.create!([{
     title: "Bicycle",
