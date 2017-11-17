@@ -23,8 +23,9 @@
     <td><%= product.type %> </td>
     <td><%= product.delivery %> </td>
     <td><%= product.city %> </td>
+    <td><%= product.active %> </td>
     <td><%= link_to 'Show', product_path(product)%> </td>
-    <td><%= link_to 'Delete', product_path(product),
+    <td><%= link_to 'Destroy', product,
             method: :delete,
             data: { confirm: 'Are you sure?' } %></td>
     </tr>
