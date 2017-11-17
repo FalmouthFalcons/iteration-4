@@ -1,5 +1,14 @@
 class ProductsController < ApplicationController
 
+    def index
+        @products = Product.all
+    end
+
+    def show
+        @product = Product.find(params[:id])
+        @products = Product.all
+    end
+
     # makes new instance for new products that is referd to in the view.
     def new
         @product = Product.new
@@ -20,18 +29,11 @@ class ProductsController < ApplicationController
         end
     end
 
-    def index
-        @product = Product.all
-    end
-
-    def show
+    def destroy
         @product = Product.find(params[:id])
-        @products = Product.all
-    end
-
-    # method for category listings
-    def categoryshow
-
+        if @product.destroy
+            redirect_to 'index'
+        end
     end
 
     # makes sure the product_params are not accesable to user.
