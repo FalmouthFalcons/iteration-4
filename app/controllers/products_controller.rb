@@ -34,11 +34,18 @@ class ProductsController < ApplicationController
         end
     end
 
+    def update
+    end
+
     def destroy
         @product = Product.find(params[:id])
-        if @product.destroy
-            redirect_to products_path
-        end
+        # when user deletes, make sure they are the one that created product
+        @user = User.find(session[:user_id])
+            if @user.id == @product.user_id
+                @product.active = false
+                @product.save
+            end
+        redirect_to products_path
     end
 
     # method for category listings

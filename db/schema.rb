@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20171116210747) do
     t.string "product_image_content_type"
     t.integer "product_image_file_size"
     t.datetime "product_image_updated_at"
+    t.boolean "active"
     t.index ["product_type_id"], name: "index_products_on_product_type_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
