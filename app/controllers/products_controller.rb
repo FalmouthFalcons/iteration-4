@@ -23,16 +23,21 @@ class ProductsController < ApplicationController
     end
 
     def index
-        @product = Product.all
+        # gets last submission at top
+        @product = Product.all.order("created_at DESC" )
     end
 
     def show
         @product = Product.find(params[:id])
         @products = Product.all
+        # gets number of items in each category for show page
+        @products_count = Product.group(:category).count(:category)
     end
 
     # method for category listings
     def categoryshow
+        @products = Products.all
+        @categories = @products.category
 
     end
 
