@@ -40,19 +40,3 @@
 
 </table>
 
-<div class="row">
-  <div class="col-3">
-            <p class="move_right"><%= @product.title %> </p>
-            <p class="move_right"><%= @product.category %> </p>
-            <p class="move_right"><%= @product.description %> </p>
-
-    <p>
-        <%= form.submit %>
-    </p>
-
-
-    </div>
- <%# shows image only if one exits %>
- <% if @product.product_image.present? %>
-    <div class="col-9"><%= image_tag @product.product_image %> 
- <% end %>
