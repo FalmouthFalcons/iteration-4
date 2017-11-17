@@ -41,6 +41,7 @@ class ProductsController < ApplicationController
         @product = Product.find(params[:id])
         @product.active = false
         @product.save
+        # if product is apart of an order do not destroy or make active false
 
         redirect_to products_path
     end
