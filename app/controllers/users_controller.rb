@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(session[:user_id])
+  end
+
   private
   # Use strong_parameters for attribute whitelisting
   # Be sure to update your create() and update() controller methods.
