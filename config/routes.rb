@@ -3,12 +3,15 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
 
+  resources :orders
   resources :users
   resources :sessions
   resources :payment_types
   resources :products do
     get 'categoryshow'
   end
+
+  post 'add_to_cart', to: 'orders#add_to_cart'
 
 
   get 'signup', to: 'users#new', as: 'signup'
