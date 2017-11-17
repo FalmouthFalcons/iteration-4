@@ -24,20 +24,6 @@
         <td><%= product.city %> </td> 
         <td><%= product.type %> </td> 
         <td><%= product.delivery %> </td> 
-<<<<<<< HEAD
-
-   </tr>
-   
- </div>
-
-   <%# <%= product.select(price).sum %> 
-    
-
-<% end %>
-  <% if @product.product_image.present? %>
-    <div class="col-9"><%= image_tag @product.product_image %> 
-    <% end %>
-=======
   <td>   <% if product.product_image.present? %>
     <div class="col-9"><%= image_tag product.product_image %> 
 
@@ -54,7 +40,6 @@
     
 
 
->>>>>>> master
  
 
 </table>
