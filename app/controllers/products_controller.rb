@@ -39,6 +39,7 @@ class ProductsController < ApplicationController
         if @product.destroy
             redirect_to products_path
         end
+    end
 
     # method for category listings
     def categoryshow
