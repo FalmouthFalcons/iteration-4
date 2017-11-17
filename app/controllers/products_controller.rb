@@ -39,10 +39,12 @@ class ProductsController < ApplicationController
 
     def destroy
         @product = Product.find(params[:id])
-        @product.active = false
-        @product.save
-        # if product is apart of an order do not destroy or make active false
-
+        # when user deletes, make sure they are the one that created product
+        @user = User.find(session[:user_id])
+            if @user.id == @product.user_id
+                @product.active = false
+                @product.save
+            end
         redirect_to products_path
     end
 
