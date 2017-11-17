@@ -1,13 +1,16 @@
 class ProductsController < ApplicationController
 
     def index
-        @products = Product.all
+         # gets last submission at top
+        @product = Product.all.order("created_at DESC" )
     end
 
-    def show
-        @product = Product.find(params[:id])
-        @products = Product.all
-    end
+     def show
+          @product = Product.find(params[:id])
+          @products = Product.all
+          # gets number of items in each category for show page
+          @products_count = Product.group(:category).count(:category)
+     end
 
     # makes new instance for new products that is referd to in the view.
     def new
@@ -36,6 +39,11 @@ class ProductsController < ApplicationController
         if @product.destroy
             redirect_to products_path
         end
+
+    # method for category listings
+    def categoryshow
+        @products = Products.all
+        @categories = @products.category
     end
 
     # makes sure the product_params are not accesable to user.
