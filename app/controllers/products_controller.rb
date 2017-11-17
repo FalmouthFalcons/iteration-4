@@ -29,10 +29,14 @@ class ProductsController < ApplicationController
     def show
         @product = Product.find(params[:id])
         @products = Product.all
+        # gets number of items in each category for show page
+        @products_count = Product.group(:category).count(:category)
     end
 
     # method for category listings
     def categoryshow
+        @products = Products.all
+        @categories = @products.category
 
     end
 
