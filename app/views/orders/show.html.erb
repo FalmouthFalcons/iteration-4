@@ -9,10 +9,10 @@
     <th>Type </th>
     <th>Delivery </th>
     <th>City </th>
-    <th> </th> 
-
+    <th>Image </th> 
+ 
 </tr>
-
+ <%total = 0%>
 <% @final.each do |product| %>
 
 <div class="row">
@@ -24,18 +24,22 @@
         <td><%= product.city %> </td> 
         <td><%= product.type %> </td> 
         <td><%= product.delivery %> </td> 
+  <td>   <% if product.product_image.present? %>
+    <div class="col-9"><%= image_tag product.product_image %> 
 
-   </tr>
-   
- </div>
-
-   <%# <%= product.select(price).sum %> 
-    
+<% total += product.price %>
+    <% end %> </td>
 
 <% end %>
-  <% if @product.product_image.present? %>
-    <div class="col-9"><%= image_tag @product.product_image %> 
-    <% end %>
+<%=total%>
+   </tr>
+     
+ </div>
+
+   
+    
+
+
  
 
 </table>
