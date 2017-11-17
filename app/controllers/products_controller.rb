@@ -23,7 +23,8 @@ class ProductsController < ApplicationController
     end
 
     def index
-        @product = Product.all
+        # gets last submission at top
+        @product = Product.all.order("created_at DESC" )
     end
 
     def show
