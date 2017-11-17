@@ -36,11 +36,25 @@ class OrdersController < ApplicationController
 
         @user = User.find(session[:user_id]) 
         puts @user
-        @order_product = OrderProduct.where(order_id: params[:id])
-        puts @order_product
 
-      
+        @order_product = OrderProduct.where(order_id: params[:id])
+        
+        @final = []
+
+        @order_product.each do |op|
+            puts Product.find(op.product_id)
+        
+   
+
+        @product = Product.find(op.product_id)
+          
+        @final.push(@product)
+
+        end
+
     end
+
+
     
     private
     def product_params
