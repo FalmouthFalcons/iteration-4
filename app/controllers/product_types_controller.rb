@@ -4,6 +4,9 @@ class ProductTypesController < ApplicationController
         # gets number of items in each category for show page
         @products_count = Product.group(:category).count(:category)
         
+        @products = Product.all
+
+
     end
 
 end
