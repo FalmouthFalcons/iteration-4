@@ -97,7 +97,14 @@ Product.create!([{
     user_id: 1,
     city: "Knoxville",
     description: "Samsung’s activewash™ Top Load Washer with 5.2 cu. ft. capacity allows for larger loads so you can spend less time doing laundry. The built-in sink lets you pre-treat and pre-soak your clothes with ease, while Super Speed technology lets you power through laundry day 35% faster without sacrificing cleaning performance. With Vibration Reduction Technology, wash loads stays balanced and quiet even at high speeds."
+}])
 
+
+
+User.create!([{
+    email: "user@gmail.com",
+    password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a"
 }])
 
 p "Created #{Product.count} products"
+p "Created #{User.count} users"
