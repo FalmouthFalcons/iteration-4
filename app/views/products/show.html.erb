@@ -23,6 +23,8 @@
  <%# shows image only if one exits %>
  <% if @product.product_image.present? %>
     <div class="col-9"><%= image_tag @product.product_image %> 
+<% elsif %>
+    <div class="col-9"><%= image_tag('product_holder.jpeg')%>
  <% end %>
 
    

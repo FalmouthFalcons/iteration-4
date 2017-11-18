@@ -26,11 +26,11 @@
         <td class="order_rows"><%= product.type %> </td> 
         <td class="order_rows"><%= product.price %> </td> 
   <td>   <% if product.product_image.present? %>
-    <%= image_tag product.product_image , :class => "order_image " %> 
-
+            <%= image_tag product.product_image , :class => "order_image " %> 
+        <% else %>
+            <%= image_tag('product_holder.jpeg', :class => "order_image")%>
+        <% end %> </td>
 <% total += product.price %>
-    <% end %> </td>
-
 <% end %>
 
    </tr>
