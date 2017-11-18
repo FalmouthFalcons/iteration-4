@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.tr_header {
+    background-color: lightskyblue;
+}
+
   .order_rows{
      padding: 6px;
      border: 1px solid lightgray;

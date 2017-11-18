@@ -2,7 +2,7 @@
 <%= link_to 'back', products_path, :class => "move_right" %>
 <br>
 
-<h3>Add To Cart</h3>
+<h3 class="move_right">Add To Cart</h3>
 
 <%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 
