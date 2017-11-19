@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
     def index
-         # search feature not working yet
+         # search feature for products
         if params[:search]
         @product = Product.search(params[:search])
         else 
