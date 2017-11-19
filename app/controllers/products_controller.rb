@@ -2,10 +2,13 @@ class ProductsController < ApplicationController
 
     def index
          # gets last submission at top
-        @product = Product.all.order("created_at DESC" )
         # search feature not working yet
-        @products = Product.search(params[:search])
-        
+
+        if params[:search]
+        @product = Product.search(params[:search])
+        else 
+        @product = Product.all.order("created_at DESC" )
+        end 
     end
 
      def show
