@@ -47,7 +47,10 @@
 
   <p>
     <%= form.label :delivery %><br>
-    <%= form.text_field :delivery %>
+    <%= form.label :delivery, "Yes", :value => "true" %>
+    <%= form.radio_button :delivery, true %>
+    <%= form.label :delivery, "No", :value => "false" %>
+    <%= form.radio_button :delivery, false, :checked => true %>
   </p>
 
   <p>
