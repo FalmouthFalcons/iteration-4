@@ -12,23 +12,23 @@
     <th class="order_rows">City </th>
     <th class="order_rows">type </th>
     <th class="order_rows">price </th>
-    <th class="move_right">Image </th> 
- 
+    <th class="move_right">Image </th>
+
 </tr>
  <%total = 0%>
 <% @final.each do |product| %>
 
 
-  
+
    <tr>
-        <td class="order_rows"><%= product.title %> </td>  
-        <td class="order_rows"><%= product.category %> </td>
-        <td class="order_rows"><%= product.delivery %> </td>  
-        <td class="order_rows"><%= product.city %> </td> 
-        <td class="order_rows"><%= product.type %> </td> 
-        <td class="order_rows"><%= product.price %> </td> 
+        <td class="order_rows"><%= product.title %> </td>
+        <td class="order_rows"><%= product.product_type_id %> </td>
+        <td class="order_rows"><%= product.delivery %> </td>
+        <td class="order_rows"><%= product.city %> </td>
+        <td class="order_rows"><%= product.type %> </td>
+        <td class="order_rows"><%= product.price %> </td>
   <td>   <% if product.product_image.present? %>
-            <%= image_tag product.product_image , :class => "order_image " %> 
+            <%= image_tag product.product_image , :class => "order_image " %>
         <% else %>
             <%= image_tag('boat.jpg', :class => "order_image")%>
         <% end %> </td>
@@ -36,14 +36,14 @@
 <% end %>
 
    </tr>
-   
-     
+
+
 <h5 class="move_right"> Total Price: <%=total.round(2)%></h5><br>
-   
-    
 
 
- 
+
+
+
 
 </table>
 
