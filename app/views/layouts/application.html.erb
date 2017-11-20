@@ -19,6 +19,7 @@
     <td><%= link_to 'Home', welcome_index_path, :class => "white"%> </td>
     <td><%= link_to 'Buy Products', products_path, :class => "white"%></td>
     <td><%= link_to 'Submit Product to Sell', new_product_url, :class => "white"%></td>
+    <td><%= link_to 'Product Categories', product_types_path, :class => "white"%></td>
 
     <td><%= link_to 'Profile', profile_path, :class => "white"%></td>
     <td><%= link_to 'Add Payment Type', new_payment_type_path, :class => "white"%> </td>
@@ -48,19 +49,19 @@
     <td></td>
     <td></td>
     <td></td>
-    
+
 
     <td><% if logged_in? %>
-        <%= link_to 'Logout', logout_path, :class => "white"%> 
+        <%= link_to 'Logout', logout_path, :class => "white"%>
           <% else %>
-            <%= link_to "Sign Up", signup_path, :class => "white"%> 
-            <%= link_to "Log In", login_path, :class => "white"%> 
+            <%= link_to "Sign Up", signup_path, :class => "white"%>
+            <%= link_to "Log In", login_path, :class => "white"%>
         <% end %>
     </td>
 
   </tr>
 </table>
-</nav>  
+</nav>
     <%= yield %>
   </body>
 </html>
