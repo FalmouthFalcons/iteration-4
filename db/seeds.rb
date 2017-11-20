@@ -17,6 +17,15 @@
 
 
 # Product.destroy_all
+# Order.destroy_all
+
+# creates a user so that new users will not get error
+
+User.create!([{
+    email: "user5@gmail.com",
+    password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a"
+}])
+
 
 #creates new records for products table
 Product.create!([{
@@ -101,11 +110,7 @@ Product.create!([{
 }])
 
 
-# creates a user so that new users will not get error
-User.create!([{
-    email: "user@gmail.com",
-    password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a"
-}])
+
 
 #prints out the total count for Users and Products tables
 p "Created #{Product.count} products"

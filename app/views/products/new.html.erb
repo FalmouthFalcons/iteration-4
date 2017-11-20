@@ -1,6 +1,6 @@
 <br>
 <h1>List Product for Sale</h1>
-<%= link_to 'Back', url_for(:back) %>
+<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
 <%= form_with model: @product, local: true do |form| %>
 
 <% if @product.errors.any? %>
