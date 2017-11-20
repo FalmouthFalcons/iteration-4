@@ -9,5 +9,8 @@
 <%# <% end %>
 
 <% @products_count.each do |a|%>
-   <br><%= a %>
+    
+   <br><%= a.category %><br>
+       <%= a.count(:products) %>
+
 <% end %>
