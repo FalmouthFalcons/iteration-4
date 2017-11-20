@@ -110,8 +110,8 @@ GEM
     public_suffix (3.0.1)
     puma (3.10.0)
     rack (2.0.3)
-    rack-test (0.7.1)
-      rack (>= 1.0, < 3)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rails (5.1.4)
       actioncable (= 5.1.4)
       actionmailer (= 5.1.4)
@@ -178,7 +178,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    wdm (0.1.1)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -203,6 +202,7 @@ DEPENDENCIES
   paperclip (~> 5.1)
   pry
   puma (~> 3.7)
+  rack-test (~> 0.6.3)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   selenium-webdriver
@@ -212,8 +212,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
-  wdm (>= 0.1.0)
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

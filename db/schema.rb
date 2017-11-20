@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117180146) do
+ActiveRecord::Schema.define(version: 20171120172730) do
 
   create_table "order_products", force: :cascade do |t|
     t.integer "product_id"
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20171117180146) do
     t.integer "product_image_file_size"
     t.datetime "product_image_updated_at"
     t.boolean "active"
+    t.integer "quantity"
+    t.integer "sold"
     t.index ["product_type_id"], name: "index_products_on_product_type_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
