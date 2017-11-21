@@ -1,6 +1,10 @@
 <h1>Payment Options:</h1>
+<span class="move_right">
 <%= link_to 'Back', url_for(:back) %>
-<%= link_to 'Add Payment', new_payment_type_path %>
+<br>
+<br>
+<span class="move_right">
+<%= link_to 'Add Payment Type', new_payment_type_path %>
 
 <%# This section shows all of the payment types related to a customer %>
 <table>
@@ -8,6 +12,7 @@
     <th>Payment Method </th>
     <th>Account Number</th>
 </tr>
+<hr>
 <% @get_all.each do |payment| %>
    <tr>
     <td><%= payment.payment %> </td>

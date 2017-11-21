@@ -16,10 +16,15 @@
  <nav class="navbar navbar-inverse bg-primary">
  <table class="nav_height">
   <tr>
-    <td><%= link_to 'Home', welcome_index_path, :class => "white"%> </td>
-    <td><%= link_to 'Buy Products', products_path, :class => "white"%></td>
-    <td><%= link_to 'My Products', new_product_url, :class => "white"%></td>
-    <td><%= link_to 'Profile', profile_path, :class => "white"%></td>
+    <td><%= link_to 'Home  |', welcome_index_path, :class => "white"%> 
+    </td>
+    <td><%= link_to 'Buy Products  |', products_path, :class => "white"%>
+    </td>
+    <%if logged_in? %>
+      <td><%= link_to 'My Products  |', my_products_path, :class => "white"%> 
+    <% end %>
+      </td>
+    <td><%= link_to 'Profile  |', profile_path, :class => "white"%></td>
 
     <td></td>
 
@@ -53,6 +58,7 @@
         <%= link_to 'Logout', logout_path, :class => "white"%> 
           <% else %>
             <%= link_to "Sign Up", signup_path, :class => "white"%> 
+            | 
             <%= link_to "Log In", login_path, :class => "white"%> 
         <% end %>
     </td>

@@ -8,18 +8,20 @@
 <tr class="order_rows tr_header">
     <th class="order_rows">Title </th>
     <th class="order_rows">Category </th>
-    <th class="order_rows">Delivery </th>
+    <th class="order_rows">Local Delivery? </th>
     <%# <th class="order_rows">City </th> %>
     <th class="order_rows">Type </th>
+    <th class="order_rows">Quantity </th>
     <th class="order_rows">Price </th>
     <th class="move_right">Image </th> 
- 
 </tr>
+
+<hr>
+
+<%= link_to 'Place Order', place_order_path %>
  <%total = 0%>
 <% @final.each do |product| %>
 
-
-  
    <tr>
         <td class="order_rows"><%= product.title %> </td>  
         <td class="order_rows"><%= product.category %> </td>
@@ -39,7 +41,7 @@
    </tr>
    
      
-<h5 class="move_right"> Total Price: <%=total.round(2)%></h5><br>
+<h3 class="move_right"> Total Price: <%=total.round(2)%></h3><br>
    
     
 
