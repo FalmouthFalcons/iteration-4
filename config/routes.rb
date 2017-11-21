@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :users, :controller => 'users_controller'
   resources :sessions
   resources :payment_types
-  resources :product_types
+  resources :product_types do
+    get 'categoryshow'
+  end
   resources :products do
     get 'categoryshow'
   end

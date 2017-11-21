@@ -7,7 +7,7 @@
 <table>
 <tr>
     <th>Title </th>
-    <th>Category </th>
+    <th>Product Type Id </th>
     <th>Price </th>
     <th>Type </th>
     <th>Delivery </th>
@@ -17,7 +17,7 @@
 </tr>
 <%# loop for each product on index page  %>
 <% @product.each do |product| %>
-   <tr>
+    <tr>
     <td><%= product.title %> </td>
     <td><%= product.product_type_id %> </td>
     <td><%= product.price %> </td>
