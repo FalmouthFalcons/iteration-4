@@ -1,5 +1,8 @@
 # Bangazon Iteration 3 
-The First UI Version of Bangazon User-facing platform
+
+Planning and issue ticketing via Trello: https://trello.com/b/2SrhNv94/bangazon-site-version-1
+
+Our First UI Version of Bangazon User-facing platform
 
 * Allow a Bangazon user to perform the following: 
   * Interact with a basic product ordering database via a local host 3000 interface. 
