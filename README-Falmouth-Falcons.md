@@ -1,16 +1,16 @@
 # Bangazon Iteration 3 
 The First UI Version of Bangazon User-facing platform
 
-*Allow a Bangazon user to perform the following: 
-  *Interact with a basic product ordering database via a local host 3000 interface. 
-  *Register a new account to save a personal profile, products to buy and products to sell 
-  *Browse/Search/Sort/Filter products to BUY, including the following details about a product: 
+* Allow a Bangazon user to perform the following: 
+  * Interact with a basic product ordering database via a local host 3000 interface. 
+  * Register a new account to save a personal profile, products to buy and products to sell 
+  * Browse/Search/Sort/Filter products to BUY, including the following details about a product: 
       * Title, description, type, category, price/ea, quantity available, local delivery, ability to add to an order. 
-  *Add products to an order / remove products from an order. 
-  *Complete an order using a saved payment method. 
-  *Add new product and its details in a product listing to SELL.
-  *Product inventory shall update according to listing (active/inactive) or per-purchase. 
-  *Edit personal profile including email, password, city of residence, and add/edit payment types. 
+  * Add products to an order / remove products from an order. 
+  * Complete an order using a saved payment method. 
+  * Add new product and its details in a product listing to SELL.
+  * Product inventory shall update according to listing (active/inactive) or per-purchase. 
+  * Edit personal profile including email, password, city of residence, and add/edit payment types. 
   
 ## Getting Started & Installing
 
