@@ -24,12 +24,12 @@ These instructions will get you a copy of the project up and running on your loc
         [instructions](https://gist.github.com/iest/58692bf1001b0424c257) 
         to create the variable and set it to the absolute path of the bangazon_sqlite3.sqlite3 file
 4. Based on the context of the user's environment, perform some or all of the following actions/commands: 
-  ** Gemfile alterations 'bcrypt' and 'wdm'
-  ** bundle install 
-  ** rails db:seed 
-  ** rails db:migrate
-  ** rails server 
-  ** see localhost:3000 in your browser. 
+  * Gemfile alterations 'bcrypt' and 'wdm'
+  * bundle install 
+  * rails db:seed 
+  * rails db:migrate
+  * rails server 
+  * see localhost:3000 in your browser. 
 
 
 ## Built With
