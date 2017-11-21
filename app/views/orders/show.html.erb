@@ -8,12 +8,13 @@
 <tr class="order_rows tr_header">
     <th class="order_rows">Title </th>
     <th class="order_rows">Category </th>
+
     <th class="order_rows">Local Delivery? </th>
     <%# <th class="order_rows">City </th> %>
     <th class="order_rows">Type </th>
     <th class="order_rows">Quantity </th>
     <th class="order_rows">Price </th>
-    <th class="move_right">Image </th> 
+
 </tr>
 
 <hr>
@@ -21,6 +22,7 @@
 <%= link_to 'Place Order', place_order_path %>
  <%total = 0%>
 <% @final.each do |product| %>
+
 
    <tr>
         <td class="order_rows"><%= product.title %> </td>  
@@ -30,8 +32,9 @@
         <td class="order_rows"><%= product.type %> </td> 
         <td class="order_rows"><%= product.quantity %> </td> 
         <td class="order_rows"><%= product.price %> </td> 
+
   <td>   <% if product.product_image.present? %>
-            <%= image_tag product.product_image , :class => "order_image " %> 
+            <%= image_tag product.product_image , :class => "order_image " %>
         <% else %>
             <%= image_tag('boat.jpg', :class => "order_image")%>
         <% end %> </td>
@@ -39,14 +42,8 @@
 <% end %>
 
    </tr>
-   
-     
-<h3 class="move_right"> Total Price: <%=total.round(2)%></h3><br>
-   
     
-
-
+<h3 class="move_right"> Total Price: <%=total.round(2)%></h3><br>
  
-
 </table>
 

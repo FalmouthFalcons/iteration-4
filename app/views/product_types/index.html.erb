@@ -1,5 +1,21 @@
-<%   @products.each_with_index do |key, value|%>
-    <%= key %> <br><%= value %>
+
+<h1>Product Categories</h1>
+<br>
+<%= link_to 'Back', url_for(:back) %>
+<br>
+<br>
+<table>
+<tr>
+    <th>Category</th>
+    <th>Total Products</th>
+</tr>
+<% @product_types.each do |p|%>
+    <tr>
+    <td><%= p.category %></td>
+    <td><%= @products_count[p.id] %>
+
+    <td><%= @first_three[1..2]  %>
+
+    </tr>
 <% end %>
-
-
+</table>

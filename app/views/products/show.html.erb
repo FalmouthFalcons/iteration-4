@@ -10,8 +10,9 @@
    
    <div class="row">
   <div class="col-3">
-            <p class="move_right">Product: <%= @product.title %> </p>
-            <p class="move_right">Category: <%= @product.category %> </p>
+
+            <p class="move_right"><%= @product.title %> </p>
+            <p class="move_right"><%= @product.product_type_id %> </p>
             <p class="move_right">Price: <%= @product.price %> </p>
             <p class="move_right">Description: <%= @product.description %> </p>
             <p class="move_right">Quantity Available:<%= @product.quantity %> </p>

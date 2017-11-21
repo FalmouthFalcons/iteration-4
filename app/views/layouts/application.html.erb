@@ -25,6 +25,10 @@
     <% end %>
       </td>
     <td><%= link_to 'Profile  |', profile_path, :class => "white"%></td>
+   
+    <td><%= link_to 'Product Categories |', product_types_path, :class => "white"%></td>
+
+   >>>>>>> master
 
     <td></td>
 
@@ -52,20 +56,22 @@
     <td></td>
     <td></td>
     <td></td>
-    
+
 
     <td><% if logged_in? %>
-        <%= link_to 'Logout', logout_path, :class => "white"%> 
+        <%= link_to 'Logout', logout_path, :class => "white"%>
           <% else %>
+
             <%= link_to "Sign Up", signup_path, :class => "white"%> 
             | 
             <%= link_to "Log In", login_path, :class => "white"%> 
+
         <% end %>
     </td>
 
   </tr>
 </table>
-</nav>  
+</nav>
     <%= yield %>
   </body>
 </html>

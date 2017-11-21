@@ -10,6 +10,13 @@ class ProductsController < ApplicationController
         end 
     end
 
+
+     def show
+          @product = Product.find(params[:id])
+          @products = Product.all
+          # gets number of items in each category for show page
+          @products_count = Product.group(:product_type_id).count(:product_type_id)
+
     def my_products
         # @user = User.find(params[:id])
         # @my_products = Product.where(:user_id => @user_id)
@@ -17,12 +24,6 @@ class ProductsController < ApplicationController
         @my_products = @user.products
     end
 
-    def show
-        @product = Product.find(params[:id])
-        @products = Product.all
-        # gets number of items in each category for show page
-        @products_count = Product.group(:category).count(:category)
-     end
 
     # makes new instance for new products that is referd to in the view.
     def new
@@ -63,13 +64,14 @@ class ProductsController < ApplicationController
     # method for category listings
     def categoryshow
         @products = Products.all
-        @categories = @products.category
+        @categories = @products.product_type_id
     end
 
     # makes sure the product_params are not accesable to user.
     private
     def product_params
-        params.require(:product).permit(:title, :category, :type, :price, :delivery, :description, :product_image, :quantity)
+        params.require(:product).permit(:title, :product_type_id, :type, :price, :delivery, :city, :description, :product_image)
+
     end
 
 end
