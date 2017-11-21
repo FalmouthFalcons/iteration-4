@@ -16,13 +16,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Product.destroy_all
+Product.destroy_all
 # Order.destroy_all
 
 # creates a user so that new users will not get error
 
 User.create!([{
-    email: "test@testers.com",
+    email: "test4@testers.com",
     password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a",
     city: "Nashville"
 }])
@@ -31,7 +31,7 @@ User.create!([{
 #creates new records for products table
 Product.create!([{
     title: "Bicycle",
-    product_type_id: 0,
+    product_type_id: "",
     type: "",
     price: 122.66,
     delivery: "true",
@@ -57,7 +57,7 @@ Product.create!([{
     user_id: 1,
 
     description: "Talk about fine lines and great curves. That’s the beauty of the Darcy sofa—made to suit your appreciation for clean, contemporary style. A striking flared frame, comfy pillow top armrests and an ultra-soft upholstery that holds up to everyday living complete this fashion statement.",
-    quantity: 4
+    quantity: 0
 },
 {
     title: "Lawnmower",
