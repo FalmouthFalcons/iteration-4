@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20171120162907) do
     t.integer "product_image_file_size"
     t.datetime "product_image_updated_at"
     t.boolean "active"
+    t.integer "quantity"
+    t.integer "sold"
     t.index ["product_type_id"], name: "index_products_on_product_type_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(version: 20171120162907) do
     t.datetime "updated_at", null: false
     t.integer "product_id"
     t.integer "payment_type_id"
+    t.string "city"
     t.index ["payment_type_id"], name: "index_users_on_payment_type_id"
     t.index ["product_id"], name: "index_users_on_product_id"
   end

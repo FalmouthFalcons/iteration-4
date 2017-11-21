@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :orders
-  resources :users, :controller => 'users_controller'
+  # resources :users, :controller => 'users_controller'
+  resources :users
   resources :sessions
   resources :payment_types
   resources :product_types do
@@ -15,13 +16,14 @@ Rails.application.routes.draw do
   end
 
   post 'add_to_cart', to: 'orders#add_to_cart'
-
+  
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'profile', to: 'users#show', as: 'profile'
-
+  get 'my_products', to: 'products#my_products', as: 'my_products'
+  get 'place_order', to: 'orders#place_order', as: 'place_order'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

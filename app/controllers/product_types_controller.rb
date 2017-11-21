@@ -2,6 +2,7 @@ class ProductTypesController < ApplicationController
 
     def index
         # gets number of items in each category for show page
+
         # @products_count = Product.group(:category).count(:category)
         # This might work
         @product_types = ProductType.all
@@ -31,6 +32,7 @@ class ProductTypesController < ApplicationController
     def categoryshow
         @products = Products.all
         @categories = @products.product_type_id
+
     end
 
     private

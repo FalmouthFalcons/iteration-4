@@ -1,16 +1,29 @@
 class ProductsController < ApplicationController
 
     def index
-         # gets last submission at top
+         # search feature for products
+        if params[:search]
+        @product = Product.search(params[:search])
+        else 
+        # gets last submission at top
         @product = Product.all.order("created_at DESC" )
+        end 
     end
+
 
      def show
           @product = Product.find(params[:id])
           @products = Product.all
           # gets number of items in each category for show page
           @products_count = Product.group(:product_type_id).count(:product_type_id)
-     end
+
+    def my_products
+        # @user = User.find(params[:id])
+        # @my_products = Product.where(:user_id => @user_id)
+        @user = User.find(session[:user_id])
+        @my_products = @user.products
+    end
+
 
     # makes new instance for new products that is referd to in the view.
     def new
@@ -58,6 +71,7 @@ class ProductsController < ApplicationController
     private
     def product_params
         params.require(:product).permit(:title, :product_type_id, :type, :price, :delivery, :city, :description, :product_image)
+
     end
 
 end

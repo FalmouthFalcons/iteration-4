@@ -1,6 +1,6 @@
 <br>
-<h1>List Product for Sale</h1>
-<%= link_to 'Back', url_for(:back) %>
+<h1>List a Product for Sale</h1>
+<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
 <%= form_with model: @product, local: true do |form| %>
 
 <% if @product.errors.any? %>
@@ -46,13 +46,16 @@
   </p>
 
   <p>
-    <%= form.label :delivery %><br>
-    <%= form.text_field :delivery %>
+    <%= form.label :delivery, "Local delivery" %><br>
+    <%= form.label :delivery, "Yes", :value => "true" %>
+    <%= form.radio_button :delivery, true %>
+    <%= form.label :delivery, "No", :value => "false" %>
+    <%= form.radio_button :delivery, false, :checked => true %>
   </p>
 
   <p>
-    <%= form.label :city %><br>
-    <%= form.text_field :city %>
+    <%= form.label :quantity %><br>
+    <%= form.text_field :quantity %>
   </p>
 
   <p>
