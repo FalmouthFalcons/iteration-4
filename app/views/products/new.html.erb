@@ -1,5 +1,5 @@
 <br>
-<h1>List Product for Sale</h1>
+<h1>List a Product for Sale</h1>
 <p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
 <%= form_with model: @product, local: true do |form| %>
 
@@ -54,8 +54,8 @@
   </p>
 
   <p>
-    <%= form.label :city %><br>
-    <%= form.text_field :city %>
+    <%= form.label :quantity %><br>
+    <%= form.text_field :quantity %>
   </p>
 
   <p>

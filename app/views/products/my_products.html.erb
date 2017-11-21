@@ -1,0 +1,51 @@
+
+<br>
+
+<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
+
+<h1 class="move_right"> My Products:</h1>
+<p class="move_right">All of your products for sale:</p>
+<br>
+<span  class="move_right">
+<button><%= link_to 'List a New Product to Sell', new_product_path%></button>
+</span>
+
+<%# PLACEHOLDER for SEARCH %>
+<%# <%= form_tag products_path, :method => 'get' do %>
+  <%# <p> %>
+    <%# <%= text_field_tag :search, params[:search] %> 
+    <%# <%= submit_tag "Search", :name => nil %> 
+  <%# </p> %>
+<%# <% end %>  
+<br>
+<hr>
+ <table>
+<tr>
+    <th>Title </th>
+    <th>Category </th>
+    <th>Price </th>
+    <th>Type </th>
+    <th>Local Delivery? </th>
+    <th>Quantity Available </th>
+    <th>Active Listing? </th>
+</tr>
+<%# loop for each product on index page  %>
+<% @my_products.each do |product| %>
+   <tr>
+    <td><%= product.title %> </td>
+    <td><%= product.category %> </td>
+    <td><%= product.price %> </td>
+    <td><%= product.type %> </td>
+    <td><%= product.delivery %> </td>
+    <td><%= product.quantity %> </td>
+    <td><%= product.active %> </td>
+    <td><%= link_to 'Show Detail', product_path(product)%> </td>
+    <td><%= link_to 'Delete Listing', product,
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+<% end %>
+</table>
+
+

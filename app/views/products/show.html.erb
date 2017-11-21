@@ -2,7 +2,7 @@
 <p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
 <br>
 
-<h3 class="move_right">Add To Cart</h3>
+<h3 class="move_right">Product Detail</h3>
 
 <%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 
@@ -13,12 +13,12 @@
             <p class="move_right">Product: <%= @product.title %> </p>
             <p class="move_right">Category: <%= @product.category %> </p>
             <p class="move_right">Price: <%= @product.price %> </p>
-            <p class="move_right"><%= @product.description %> </p>
+            <p class="move_right">Description: <%= @product.description %> </p>
+            <p class="move_right">Quantity Available:<%= @product.quantity %> </p>
 
     <p>
         <%= form.submit %>
     </p>
-
 
     </div>
  <%# shows image only if one exits if not then a generic image is shown %>

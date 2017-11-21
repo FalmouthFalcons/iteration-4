@@ -1,26 +1,27 @@
  </br> 
+<br>
+
+<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
+
+<h1>All Products</h1>
+
 <%= form_tag products_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %> 
-<%# <%= link_to 'ProductToSell', new_product_url %>
 <br>
-<%# <%= link_to 'Home', welcome_index_path %>
-<h1>Products for Sale</h1>
-<br>
-<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
-<table>
+<hr>
+ <table>
 <tr>
     <th>Title </th>
     <th>Category </th>
     <th>Price </th>
     <th>Type </th>
-    <th>Delivery </th>
-    <th>City </th>
-    <th> </th>
+    <th>Local Delivery? </th>
 
+    <th>Quantity Available </th>
 </tr>
 <%# loop for each product on index page  %>
 <% @product.each do |product| %>
@@ -30,12 +31,12 @@
     <td><%= product.price %> </td>
     <td><%= product.type %> </td>
     <td><%= product.delivery %> </td>
-    <td><%= product.city %> </td>
-    <td><%= product.active %> </td>
-    <td><%= link_to 'Show', product_path(product)%> </td>
-    <td><%= link_to 'Destroy', product,
+    <%# <td><%= product.active %> </td> 
+    <td><%= product.quantity %> </td>
+    <td><%= link_to 'Show Detail', product_path(product)%> </td>
+    <%# <td><%= link_to 'Destroy', product,
             method: :delete,
-            data: { confirm: 'Are you sure?' } %></td>
+            data: { confirm: 'Are you sure?' } %>
     </tr>
 
 <% end %>
