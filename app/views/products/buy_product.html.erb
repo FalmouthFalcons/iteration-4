@@ -8,18 +8,16 @@
 
     <%=hidden_field(:product, :id)%>
    
-   <div class="row">
+<div class="row">
   <div class="col-3">
-
-            <p class="move_right"><%= @product.title %> </p>
-            <p class="move_right"><%= @product.product_type_id %> </p>
-            <p class="move_right">Price: <%= @product.price %> </p>
-            <p class="move_right">Description: <%= @product.description %> </p>
-            <p class="move_right">Quantity Available:<%= @product.quantity %> </p>
-
-    <p>
-        <%= form.submit %>
-    </p>
+    <p class="move_right"><%= @product.title %> </p>
+    <p class="move_right"><%= @product.product_type_id %> </p>
+    <p class="move_right">Price: <%= @product.price %> </p>
+    <p class="move_right">Description: <%= @product.description %> </p>
+    <p class="move_right">Quantity Available:<%= @product.quantity %> </p>
+        <p>
+            <%= form.submit 'Add to Shopping Cart'%>
+        </p>
 
     </div>
  <%# shows image only if one exits if not then a generic image is shown %>

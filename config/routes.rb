@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'users#show', as: 'profile'
   get 'my_products', to: 'products#my_products', as: 'my_products'
   get 'place_order', to: 'orders#place_order', as: 'place_order'
-  get 'orders', to: 'orders#show', as: 'order' 
+  get 'orders', to: 'orders#show', as: 'orders' 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
