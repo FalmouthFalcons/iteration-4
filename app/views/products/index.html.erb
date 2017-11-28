@@ -1,9 +1,10 @@
+ <div class="container">
  </br> 
-<br>
-
-<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
 
 <h1>All Products</h1>
+<br>
+<p><%= link_to 'Back', url_for(:back) %></p>
+
 
 <%= form_tag products_path, :method => 'get' do %>
   <p>
@@ -13,7 +14,7 @@
 <% end %> 
 <br>
 
-<p class="move_right">
+<p>
   <button><a href="orders/1">Shopping Cart</a></button> 
 </p>
 <%# <%= link_to "Home", root_path %>
@@ -51,3 +52,5 @@
     <% end %>    
   <% end %>
 </table>
+
+</div>

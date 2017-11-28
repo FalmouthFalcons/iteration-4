@@ -54,6 +54,19 @@ class OrdersController < ApplicationController
 
     end
 
+    # pick payment type
+    def place_order
+        @payment_types = PaymentType.where(customer_id: session[:user_id] )
+        
+    end
+
+    # order confirmation page with details
+    def complete_order
+        @payment_types = PaymentType.where(customer_id: session[:user_id] )
+        @user = User.find(session[:user_id])
+        @order = Order.where(customer_id: @user.id, payment_type_id: nil)
+        
+    end
 
     
     private

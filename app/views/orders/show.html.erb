@@ -1,10 +1,16 @@
-
+<div class="container">
+<br>
 <h1>Shopping Cart</h1>
 <%= link_to 'Back', url_for(:back) %>
 
 <br>
 
 <table class="order_rows">
+
+<tr>
+  <td></td><td></td> <td></td><h1> <% @total = 0%>  </td>  <td> <h4> <%= link_to 'Place Order', place_order_path %> </td> </h4>
+</tr>
+
 <tr class="order_rows tr_header">
     <th class="order_rows">Title </th>
     <th class="order_rows">Category </th>
@@ -14,13 +20,14 @@
     <th class="order_rows">Type </th>
     <th class="order_rows">Quantity </th>
     <th class="order_rows">Price </th>
+    <th class="order_rows">Pic </th>
 
 </tr>
 
 <hr>
 
-<%= link_to 'Place Order', place_order_path %>
- <%total = 0%>
+<br><br>
+
 <% @final.each do |product| %>
 
 
@@ -38,12 +45,14 @@
         <% else %>
             <%= image_tag('boat.jpg', :class => "order_image")%>
         <% end %> </td>
-<% total += product.price %>
+<% @total += product.price %>
 <% end %>
 
    </tr>
     
-<h3 class="move_right"> Total Price: <%=total.round(2)%></h3><br>
+<h3> Total Price: <%= @total.round(2)%></h3><br>
  
 </table>
 
+
+</div>
