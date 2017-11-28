@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family: Roboto;
+}
+
 .tr_header {
     background-color: lightskyblue;
 }
@@ -25,61 +30,59 @@ input {
     margin: 6px;
 }
 
-  .order_rows{
-     padding: 6px;
-     border: 1px solid lightgray;
-     /* padding-right: 42px; */
-     
- }
+.order_rows {
+    padding: 6px;
+    border: 1px solid lightgray;
+    /* padding-right: 42px; */
+}
 
- .payment_types{
+.payment_types {
     padding: 9px;
     border: 1px solid lightgray;
     padding-right: 42px;
-    
 }
- 
- .order_image {
+
+.order_image {
     width: 155px;
     height: 155px;
     border: 1px solid black;
     margin: 10px;
 }
 
- img {
+img {
     width: 500px;
     height: auto;
     border-radius: 12px;
 }
 
- .nav_height {
-     min-height: 66px;
- }
- body {
-     margin-right: 30px;
- }
+.nav_height {
+    min-height: 66px;
+}
+
+body {
+    margin-right: 30px;
+}
+
 .move_right {
     padding-left: 32px;
 }
- 
+
 .white {
     color: white;
     display: inline;
 }
 
-
-
- form {
+form {
     margin-left: 22px;
     margin-top: 22px;
- }
+}
 
- td {
+td {
     padding: 0px 16px 0px 0px;
     text-align: left;
- }
+}
 
- th {
+th {
     padding: 0px 16px 0px 0px;
     text-align: left;
- }
+}
