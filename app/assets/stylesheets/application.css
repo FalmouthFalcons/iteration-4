@@ -17,12 +17,27 @@
     background-color: lightskyblue;
 }
 
+input {
+    margin-right: 18px;
+}
+
+.margin_applied {
+    margin: 6px;
+}
+
   .order_rows{
      padding: 6px;
      border: 1px solid lightgray;
-     padding-right: 42px;
+     /* padding-right: 42px; */
      
  }
+
+ .payment_types{
+    padding: 9px;
+    border: 1px solid lightgray;
+    padding-right: 42px;
+    
+}
  
  .order_image {
     width: 155px;
@@ -32,7 +47,7 @@
 }
 
  img {
-    width: 700px;
+    width: 500px;
     height: auto;
     border-radius: 12px;
 }
@@ -52,12 +67,7 @@
     display: inline;
 }
 
- h1 {
-     padding-left: 22px;
- }
- table {
-     margin-left: 32px;
- }
+
 
  form {
     margin-left: 22px;

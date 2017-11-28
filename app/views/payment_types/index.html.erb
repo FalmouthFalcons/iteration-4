@@ -1,9 +1,11 @@
+<div class="container">
+
 <h1>Payment Options:</h1>
-<span class="move_right">
+<span>
 <%= link_to 'Back', url_for(:back) %>
 <br>
 <br>
-<span class="move_right">
+<span>
 <%= link_to 'Add Payment Type', new_payment_type_path %>
 
 <%# This section shows all of the payment types related to a customer %>
@@ -25,3 +27,5 @@
 
 <% end %>
 </table>
+
+</div>

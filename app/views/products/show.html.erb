@@ -1,20 +1,20 @@
-<br>
-<p class="move_right"><%= link_to 'Back', url_for(:back) %></p>
+<div class="container">
 <br>
 
-<h3 class="move_right">Product Detail</h3>
-
+<h3 class="">Product Detail</h3>
+<p class=""><%= link_to 'Back', url_for(:back) %></p>
+<br>
 <%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 
     <%=hidden_field(:product, :id)%>
    
 <div class="row">
   <div class="col-3">
-    <p class="move_right"><%= @product.title %> </p>
-    <p class="move_right"><%= @product.product_type_id %> </p>
-    <p class="move_right">Price: <%= @product.price %> </p>
-    <p class="move_right">Description: <%= @product.description %> </p>
-    <p class="move_right">Quantity Available:<%= @product.quantity %> </p>
+    <p><%= @product.title %> </p>
+    <p><%= @product.product_type_id %> </p>
+    <p>Price: <%= @product.price %> </p>
+    <p>Description: <%= @product.description %> </p>
+    <p>Quantity Available:<%= @product.quantity %> </p>
         <p>
             <%= form.submit 'Add to Shopping Cart'%>
         </p>
@@ -29,3 +29,5 @@
 
    
 <% end %>
+
+</div>
