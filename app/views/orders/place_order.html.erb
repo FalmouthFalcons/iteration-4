@@ -1,23 +1,32 @@
 <div class="container">
 <br>
 <h2>Select Payment Type to Complete Order</h2>
-<%= link_to 'Back', url_for(:back) %>
-<br>
 
-<br>
-<table class="payment_types">
-    <th>
+    <%= link_to 'Back', url_for(:back) %>    
+    <br>
+    <br>
+    <%= link_to 'Payment Options', url_for(:payment_types) %>
+    <br>
+    <br>
+    
+    <table class="payment_types">
+        <th>
         <%# loops through each payment type %>
-        <% @payment_types.each do |type| %>
-        <tr class="payment_types">
-            <td class="payment_types"><input type="radio" name="paymentType" value="<%= type.payment %>"><%= type.payment %> </td>   <td class="payment_types"> <%= type.account_number %> </td>
-       <tr>
-        <% end %>
-     <tr> <%= @total %> <td>  </td> 
-         <td> <%= link_to 'Complete Order', complete_order_path %> </td>  
-    </tr>   
-</table>
-<%# <button class="btn btn-primary margin_applied" type="submit">Complete Order</button> %>
-</div>
+        <%# <% @payment_types.each do |type| %> 
 
+        <%= "Select a Payment Type to Proceed" %>
+            <tr class="payment_types">
+            <td>
+                <%= form_with model: @payment_type, method: :PUT do |form| %>
+                    <%= form.select :payment_type_id, PaymentType.where(:customer_id => session[:user_id]).collect { |pt| [pt.payment, pt.id] } , include_blank: true %>
+                <br>
+                <%# May not proceed to checkout if no payment types are absent %>
+                    <% if @payment_types.any? %>
+                        <%= form.submit 'Complete Your Order'%>
+                    <% end %>
+            </td>
+            </tr>
+                <% end %>
+    </table>
+</div>
 

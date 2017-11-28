@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -12,22 +14,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%# NAVBAR to include: Home(Logo)  %>
 <body>
  <nav class="navbar navbar-inverse bg-primary">
  <table class="nav_height">
   <tr>
-    <td><%= link_to 'Home  |', welcome_index_path, :class => "white"%> 
-    </td>
-    <td><%= link_to 'Buy Products  |', products_path, :class => "white"%>
-    </td>
+    <td><%= link_to 'Home  |', welcome_index_path, :class => "white"%></td>
+    <td><%= link_to 'Buy Products  |', products_path, :class => "white"%></td>
+    
     <%if logged_in? %>
-      <td><%= link_to 'My Products  |', my_products_path, :class => "white"%> 
-    <% end %>
-      </td>
-    <td><%= link_to 'Profile  |', profile_path, :class => "white"%></td>
-   
-    <td></td>
 
+    <td><%= link_to 'My Products  |', my_products_path, :class => "white"%></td>
+    <td><%= link_to 'Profile  |', profile_path, :class => "white"%></td>
+    <td><%= link_to 'Shopping Cart  |', orders_path, :class => "white"%></td>   
+    <% end %>
+
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -57,11 +59,9 @@
     <td><% if logged_in? %>
         <%= link_to 'Logout', logout_path, :class => "white"%>
           <% else %>
-
-            <%= link_to "Sign Up", signup_path, :class => "white"%> 
+          <%= link_to "Sign Up", signup_path, :class => "white"%> 
             | 
-            <%= link_to "Log In", login_path, :class => "white"%> 
-
+          <%= link_to "Log In", login_path, :class => "white"%> 
         <% end %>
     </td>
 

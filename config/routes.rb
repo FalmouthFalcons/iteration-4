@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get 'my_products', to: 'products#my_products', as: 'my_products'
   get 'place_order', to: 'orders#place_order', as: 'place_order'
   get 'complete_order', to: 'orders#complete_order', as: 'complete_order'
+
+  put 'place_order', to: 'orders#update', as: 'update'
   
   # get 'orders', to: 'orders#show', as: 'orders' 
 
