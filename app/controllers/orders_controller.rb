@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
             new_order_product.product_id = product_params[:id]
             new_order_product.order_id = @order[0].id
             new_order_product.save
-            render 'index'    
+            redirect_to action: "index"
         else
             # identifies an existing order - push a new product to an old order 
            new_order = Order.new
@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
            new_order_product.product_id = product_params[:id]
            new_order_product.order_id = new_order.id
            new_order_product.save
-           render 'index'
+           redirect_to action: "index"
         end
   
         # takes user to the view of Shopping Cart
