@@ -22,9 +22,9 @@ Product.destroy_all
 # creates a user so that new users will not get error
 
 User.create!([{
-    email: "test9@testers.com",
-    password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a",
-    city: "Nashville"
+  email: "test1@testers.com",
+  password_digest: "$2a$10$ulnrKuQosY8upITqdSOIj.S7uL5q8JAmaP/9yy3R4IvbyrhSt427a",
+  city: "Nashville"
 }])
 
 

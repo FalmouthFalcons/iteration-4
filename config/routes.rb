@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 
   post 'add_to_cart', to: 'orders#add_to_cart'
   
-
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -27,6 +26,8 @@ Rails.application.routes.draw do
   get 'place_order', to: 'orders#place_order', as: 'place_order'
   get 'complete_order', to: 'orders#complete_order', as: 'complete_order'
   delete 'delete_product_from_order', to: 'orders#delete_product_from_order', as: 'delete_product_from_order'
+  delete 'cancel_order', to: 'orders#destroy', as: 'destroy'
+
   put 'place_order', to: 'orders#update', as: 'update'
   
   # get 'orders', to: 'orders#show', as: 'orders' 
