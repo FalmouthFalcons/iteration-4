@@ -10,6 +10,15 @@
 
 
 
+<tr>
+  <td></td><td></td> <td></td><h1> <% @total = 0%>  
+  
+  <%# OPTION TO CANCEL ORDER with confirmation. This will empty the "shopping cart" of all products%>
+<td></td><td></td> <button> <%= link_to 'Cancel Order', order_path(@order) , method: :delete,
+        data: { confirm: 'Are you sure? This will remove all products from your shopping cart!' }%> </button>
+
+  </td><td> <h4> <%= link_to 'Place Order', place_order_path %> </td> </h4>
+</tr>
 
 <tr class="order_rows tr_header">
   <th class="order_rows">Title </th>
