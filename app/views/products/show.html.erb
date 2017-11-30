@@ -6,8 +6,8 @@
 <br>
 <%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 
-    <%=hidden_field(:product, :id)%>
-   
+  <%=hidden_field(:product, :id)%>
+
 <div class="row">
   <div class="col-3">
     <p><%= @product.title %> </p>
@@ -21,13 +21,12 @@
 
     </div>
  <%# shows image only if one exits if not then a generic image is shown %>
- <% if @product.product_image.present? %>
-    <div class="col-9"><%= image_tag @product.product_image %> 
+<% if @product.product_image.present? %>
+  <div class="col-9"><%= image_tag @product.product_image %>
 <% elsif %>
-    <div class="col-9"><%= image_tag('boat.jpeg')%>
+  <div class="col-9"><%= image_tag('boat.jpeg')%>
  <% end %>
 
-   
 <% end %>
 
 </div>

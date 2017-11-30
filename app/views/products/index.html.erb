@@ -1,5 +1,5 @@
  <div class="container">
- </br> 
+ </br>
 
 <h1>All Products</h1>
 <br>
@@ -11,39 +11,39 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<% end %> 
+<% end %>
 <br>
 
  <table>
 <tr>
-    <th><%= link_to 'Title'%></th> 
-    <th><%= link_to 'Category', product_types_path %></th>
-    <th><%= link_to 'Price'%></th>
-    <th><%= link_to 'Type'%></th>
-    <th><%= link_to 'Local Delivery?'%></th>
-    <th><%= link_to 'Quantity Available'%></th>
+  <th><%= link_to 'Title'%></th>
+  <th><%= link_to 'Category', product_types_path %></th>
+  <th><%= link_to 'Price'%></th>
+  <th><%= link_to 'Type'%></th>
+  <th><%= link_to 'Local Delivery?'%></th>
+  <th><%= link_to 'Quantity Available'%></th>
 </tr>
 
 <hr>
     <%# loop for each product on index page  %>
 <% @product.each do |product| %>
-      <%# shows only active listings %>
-      <% if product.active == true || product.active.nil? %>
-      <tr>
-        <td><%= product.title %> </td>
-        <td><%= product.product_type_id %> </td>
-        <td><%= number_to_currency(product.price) %> </td>
-        <td><%= product.type %> </td>
-        <td><%= product.delivery %> </td>
-        <%# <td><%= product.active %> 
-        <td><%= product.quantity %> </td>
-        <td><%= link_to '|  Show Detail', product_path(product)%> </td>
-        <%# <td><%= link_to 'Destroy', product,
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-      </tr>
-    <% end %>    
+    <%# shows only active listings %>
+    <% if product.active == true || product.active.nil? %>
+    <tr>
+      <td><%= product.title %> </td>
+      <td><%= product.product_type_id %> </td>
+      <td><%= number_to_currency(product.price) %> </td>
+      <td><%= product.type %> </td>
+      <td><%= product.delivery %> </td>
+      <%# <td><%= product.active %>
+      <td><%= product.quantity %> </td>
+      <td><%= link_to '|  Show Detail', product_path(product)%> </td>
+      <%# <td><%= link_to 'Destroy', product,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+    </tr>
   <% end %>
+<% end %>
 </table>
 
 </div>

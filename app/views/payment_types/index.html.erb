@@ -11,19 +11,19 @@
 <%# This section shows all of the payment types related to a customer %>
 <table>
 <tr>
-    <th>Payment Method </th>
-    <th>Account Number</th>
+  <th>Payment Method </th>
+  <th>Account Number</th>
 </tr>
 <hr>
 <% @get_all.each do |payment| %>
-   <tr>
-    <td><%= payment.payment %> </td>
-    <td><%= payment.account_number %> </td>
-    <td><%= link_to 'Show',  payment_type_path(payment)%> </td>
-    <td><%= link_to 'Delete',  payment_type_path(payment),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+  <tr>
+  <td><%= payment.payment %> </td>
+  <td><%= payment.account_number %> </td>
+  <td><%= link_to 'Show',  payment_type_path(payment)%> </td>
+  <td><%= link_to 'Delete',  payment_type_path(payment),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></td>
+  </tr>
 
 <% end %>
 </table>

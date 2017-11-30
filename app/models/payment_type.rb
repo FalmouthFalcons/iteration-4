@@ -1,5 +1,5 @@
 class PaymentType < ApplicationRecord
-    def name
+  def name
 
-    end
+  end
 end
