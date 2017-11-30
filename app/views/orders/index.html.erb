@@ -20,7 +20,7 @@
   <th class="order_rows">Type </th>
   <th class="order_rows">Quantity </th>
   <th class="order_rows">Price </th>
-  <th class="order_rows">Pic </th>
+  <th class="order_rows">Image</th>
 
 </tr>
 
@@ -28,8 +28,7 @@
 
 <br><br>
 
-<% @final.each do |product| %>
-
+<% @order.products.each do |product| %>
 
   <tr>
     <td class="order_rows"><%= product.title %> </td>

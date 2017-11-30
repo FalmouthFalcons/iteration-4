@@ -61,12 +61,6 @@ class ProductsController < ApplicationController
       redirect_to products_path
   end
 
-  # method for category listings
-  def categoryshow
-      @products = Products.all
-      @categories = @products.product_type_id
-  end
-
   # makes sure the product_params are not accesable to user.
   private
   def product_params
