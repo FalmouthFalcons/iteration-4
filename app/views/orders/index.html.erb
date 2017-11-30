@@ -3,13 +3,13 @@
 <h1>Shopping Cart</h1>
 <%= link_to 'Back', url_for(:back) %>
 
-<br>
-
 <table class="order_rows">
+<h1> <% @total = 0%>  </td>  <h4> 
 
-<tr>
-  <td></td><td></td> <td></td><h1> <% @total = 0%>  </td>  <td> <h4> <%= link_to 'Place Order', place_order_path %> </td> </h4>
-</tr>
+<button type="button" class="btn btn-warning"><%= link_to 'Place Order', place_order_path %>  </h4></button>
+
+
+
 
 <tr class="order_rows tr_header">
   <th class="order_rows">Title </th>
@@ -20,13 +20,14 @@
   <th class="order_rows">Type </th>
   <th class="order_rows">Quantity </th>
   <th class="order_rows">Price </th>
-  <th class="order_rows">Image</th>
+  <th class="order_rows">Pic </th>
+  <th class="order_rows">Remove Item</th>
 
 </tr>
 
 <hr>
 
-<br><br>
+
 
 <% @order.products.each do |product| %>
 
@@ -38,18 +39,26 @@
     <td class="order_rows"><%= product.type %> </td>
     <td class="order_rows"><%= product.quantity %> </td>
     <td class="order_rows"><%= product.price %> </td>
-
-<td>   <% if product.product_image.present? %>
+    <%# Get image if available %>
+    <td class="order_rows"> <% if product.product_image.present? %>
           <%= image_tag product.product_image , :class => "order_image " %>
-      <% else %>
+        <% else %>
           <%= image_tag('boat.jpg', :class => "order_image")%>
-      <% end %> </td>
+        <% end %> </td>
+    <%# Remove item from shopping %>
+    <td class="order_rows"><%= link_to 'Delete',  delete_product_from_order_path(product),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+
+
+   
+  
 <% @total += product.price %>
 <% end %>
 
   </tr>
 
-<h3> Total Price: <%= @total.round(2)%></h3><br>
+<h4> Total Price: <%= @total.round(2)%></h4><br>
 
 </table>
 

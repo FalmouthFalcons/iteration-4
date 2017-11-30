@@ -18,8 +18,15 @@ body {
     font-family: Roboto;
 }
 
+
+
+table tr:nth-child(even) td{
+    background-color: lightgoldenrodyellow;
+    
+}
+
 .tr_header {
-    background-color: lightskyblue;
+    background-color: orange;
 }
 
 input {
@@ -31,7 +38,7 @@ input {
 }
 
 .order_rows {
-    padding: 6px;
+    padding: 7px 13px;
     border: 1px solid lightgray;
     /* padding-right: 42px; */
 }
