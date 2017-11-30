@@ -21,6 +21,7 @@
   <th class="order_rows">Quantity </th>
   <th class="order_rows">Price </th>
   <th class="order_rows">Pic </th>
+  <th class="order_rows">Remove Item</th>
 
 </tr>
 
@@ -39,12 +40,20 @@
     <td class="order_rows"><%= product.type %> </td>
     <td class="order_rows"><%= product.quantity %> </td>
     <td class="order_rows"><%= product.price %> </td>
-
-<td>   <% if product.product_image.present? %>
+    <%# Get image if available %>
+    <td> <% if product.product_image.present? %>
           <%= image_tag product.product_image , :class => "order_image " %>
-      <% else %>
+        <% else %>
           <%= image_tag('boat.jpg', :class => "order_image")%>
-      <% end %> </td>
+        <% end %> </td>
+    <%# Remove item from shopping %>
+    <td><%= link_to 'Delete',  delete_product_from_order_path(product),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+
+
+   
+  
 <% @total += product.price %>
 <% end %>
 

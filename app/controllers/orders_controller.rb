@@ -76,6 +76,19 @@ class OrdersController < ApplicationController
       @user = User.find(session[:user_id])
   end
 
+  #delete item from shopping cart method
+  def delete_product_from_order
+    puts params
+    @user = User.find(session[:user_id])
+    @order = Order.find_by(customer_id: @user.id, payment_type_id: nil)
+    find_product = Product.find(params[:format])
+    order_product = OrderProduct.find_by(product_id: find_product.id, order_id: @order.id )
+    if order_product.destroy
+        redirect_to orders_path
+    end
+  end
+
+  
   private
   def product_params
       params.require(:product).permit(:id, :title, :category, :type, :price, :delivery, :city, :description)

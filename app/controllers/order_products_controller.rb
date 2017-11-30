@@ -15,6 +15,8 @@ class OrderProductsController < ApplicationController
 
   end
 
+  
+
   private
   def product_params
       params.require(:product).permit(:title, :category, :type, :price, :delivery, :city, :description)
