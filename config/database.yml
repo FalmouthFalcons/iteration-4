@@ -22,9 +22,4 @@ test:
 
 production:
   <<: *default
-  database: falmouth_falcons_production
-  username: falmouthfalcons
-  password: <%= ENV['FALMOUTHFALCONS_DATABASE_PASSWORD'] %>
-
-
-
+  database: db/production.sqlite3
