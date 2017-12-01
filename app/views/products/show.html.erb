@@ -2,7 +2,7 @@
 <br>
 
 <h3 class="">Product Detail</h3>
-<p class=""><%= link_to 'Back', url_for(:back) %></p>
+<p class=""><button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button></p>
 <br>
 <%= form_with model: @order, :url => add_to_cart_path, local: true do |form| %>
 

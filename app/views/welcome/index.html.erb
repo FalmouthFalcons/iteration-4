@@ -1,23 +1,33 @@
-<div class="container">
 <br>
-<h1>Falmouth Falcons Buy and Sell Store</h1>
+<div class="container">
+
+<%= image_tag('store.jpg', style: "height: 600px; width: 100%") %>
+
+<h1 align="center">Falmouth Falcons-Buy and Sell Store</h1>
 
 <div id="user_header">
+<br>
   <% if logged_in? %>
-    <%= link_to 'Buy Products', products_path %>
-    </br>
-    <%= link_to 'Submit Product to Sell', new_product_url%>
+    <div class="centered">
+      <%= link_to 'Buy Products', products_path, class: "btn btn-primary margin_bottom" %>
 
-    <br>
-    <%= link_to 'Add Payment Type', new_payment_type_path %>
-    <br>
-    <%= link_to 'Logout', logout_path %>
-  <% else %>
-    <%= link_to "Sign Up", signup_path %>
-    <br>
-    <%= link_to "Log In", login_path %>
-     <br>
-    <%= link_to 'View Products', products_path %>
+      <%= link_to 'My Products', my_products_path, class: "btn btn-primary margin_bottom"%>
+
+      <%= link_to 'Shopping Cart', orders_path, class: "btn btn-primary margin_bottom margin_bottom"%>
+
+      <%= link_to 'Submit Product to Sell', new_product_url, class: "btn btn-primary margin_bottom"%>
+
+      <%= link_to 'Add Payment Type', new_payment_type_path, class: "btn btn-primary margin_bottom" %>
+   
+      <%= link_to 'Logout', logout_path, class: "btn btn-primary margin_bottom" %>
+      </div>
+    <% else %>
+    <div class="centered">
+      <%= link_to "Sign Up", signup_path, class: "btn btn-primary margin_bottom" %>
+
+      <%= link_to "Log In", login_path, class: "btn btn-primary margin_bottom" %>
+      <%= link_to 'View Products', products_path, class: "btn btn-primary margin_bottom" %>
+    </div>
   <% end %>
 </div>
 

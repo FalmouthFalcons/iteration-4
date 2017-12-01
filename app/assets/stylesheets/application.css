@@ -18,7 +18,30 @@ body {
     font-family: Roboto;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 32px;
+}
 
+.cart {
+    height: 77px;
+    width: 77px;
+}
+
+.all_prod_rows {
+    padding: 12px;
+    border: 1px solid lightgray;
+}
+
+.small_image {
+    width: 55px;
+    height: 55px;
+    border: 1px solid black;
+    margin: 2px;
+}
 
 table tr:nth-child(even) td{
     background-color: lightgoldenrodyellow;
@@ -33,6 +56,9 @@ input {
     margin-right: 18px;
 }
 
+.margin_bottom {
+    margin-bottom: 10px;
+}
 .margin_applied {
     margin: 6px;
 }
