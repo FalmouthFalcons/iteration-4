@@ -1,10 +1,10 @@
 <div class="container">
 <br>
 
-<p><%= link_to 'Back', url_for(:back) %></p>
-
 <h1> My Products:</h1>
-<p >All of your products for sale:</p>
+<p><button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button></p>
+
+<h4>All of your products for sale:</h4>
 <br>
 <span>
 <button><%= link_to 'List a New Product to Sell', new_product_path%></button>
@@ -19,28 +19,38 @@
 <%# <% end %>  
 <br>
 <hr>
- <table>
-<tr>
-    <th>Title </th>
-    <th>Category </th>
-    <th>Price </th>
-    <th>Type </th>
-    <th>Local Delivery? </th>
-    <th>Quantity Available </th>
-    <th>Active Listing? </th>
+ <table class="all_prod_rows">
+<tr class="all_prod_rows tr_header">
+    <th class="order_rows">Title </th>
+    <th class="order_rows">Category </th>
+    <th class="order_rows">Price </th>
+    <th class="order_rows">Type </th>
+    <th class="order_rows">Local Delivery? </th>
+    <th class="order_rows">Qty Available </th>
+    <th class="order_rows">Active Listing? </th>
+    <th class="order_rows">Image </th>
+    <th class="order_rows">Details </th>
+    <th class="order_rows">Remove </th>
+
+
 </tr>
 <%# loop for each product on index page  %>
 <% @my_products.each do |product| %>
-   <tr>
-    <td><%= product.title %> </td>
-    <td><%= product.product_type_id %> </td>
-    <td><%= product.price %> </td>
-    <td><%= product.type %> </td>
-    <td><%= product.delivery %> </td>
-    <td><%= product.quantity %> </td>
-    <td><%= product.active %> </td>
-    <td><%= link_to 'Show Detail', product_path(product)%> </td>
-    <td><%= link_to 'Delete Listing', product,
+   <tr class="all_prod_rows">
+    <td class="all_prod_rows"><%= product.title %> </td>
+    <td class="all_prod_rows"><%= product.product_type_id %> </td>
+    <td class="all_prod_rows"><%= product.price %> </td>
+    <td class="all_prod_rows"><%= product.type %> </td>
+    <td class="all_prod_rows"><%= product.delivery %> </td>
+    <td class="all_prod_rows"><%= product.quantity %> </td>
+    <td class="all_prod_rows"><%= product.active %> </td>
+    <td class="order_rows"> <% if product.product_image.present? %>
+        <%= image_tag product.product_image , :class => "small_image " %>
+        <% else %>
+          <%= image_tag('boat.jpg', :class => "small_image")%>
+        <% end %> </td>  
+    <td class="all_prod_rows"><%= link_to 'Show Detail', product_path(product) , class: "btn btn-primary"%> </td>
+    <td class="all_prod_rows"><%= link_to 'Delete', product, class: "btn btn-danger",
             method: :delete,
             data: { confirm: 'Are you sure?' } %></td>
     </tr>

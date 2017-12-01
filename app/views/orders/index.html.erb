@@ -1,12 +1,12 @@
 <div class="container">
 <br>
-<h1>Shopping Cart</h1>
-<%= link_to 'Back', url_for(:back) %>
-
+<h1>Shopping Cart <%= image_tag('cart.png', :class => "cart")%> </h1> 
+<button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button>
+<hr>
 <table class="order_rows">
 <h1> <% @total = 0%>  </td>  <h4> 
 
-<button type="button" class="btn btn-warning"><%= link_to 'Place Order', place_order_path %>  </h4></button>
+<%= link_to 'Place Order', place_order_path, class: "btn btn-warning" %> </h4>
 
 
 
@@ -14,10 +14,10 @@
   <td></td><td></td> <td></td><h1> <% @total = 0%>  
   
   <%# OPTION TO CANCEL ORDER with confirmation. This will empty the "shopping cart" of all products%>
-<td></td><td></td> <button> <%= link_to 'Cancel Order', order_path(@order) , method: :delete,
-        data: { confirm: 'Are you sure? This will remove all products from your shopping cart!' }%> </button>
+<td></td><td></td>  <%= link_to 'Cancel Order', order_path(@order) , method: :delete, class: "btn btn-danger",
+        data: { confirm: 'Are you sure? This will remove all products from your shopping cart!' }%> 
 
-  </td><td> <h4> <%= link_to 'Place Order', place_order_path %> </td> </h4>
+  <%# </td><td> <h4> <%= link_to 'Place Order', place_order_path %> 
 </tr>
 
 <tr class="order_rows tr_header">
@@ -55,7 +55,7 @@
           <%= image_tag('boat.jpg', :class => "order_image")%>
         <% end %> </td>
     <%# Remove item from shopping %>
-    <td class="order_rows"><%= link_to 'Delete',  delete_product_from_order_path(product),
+    <td class="order_rows"><%= link_to 'Delete',  delete_product_from_order_path(product), class: "btn btn-danger",
         method: :delete,
         data: { confirm: 'Are you sure?' } %></td>
 

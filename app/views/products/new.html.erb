@@ -4,7 +4,7 @@
 
 <br>
 <h1>List a Product for Sale</h1>
-<p><%= link_to 'Back', url_for(:back) %></p>
+<p><button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button></p>
 <%= form_with model: @product, local: true do |form| %>
 
 <% if @product.errors.any? %>
