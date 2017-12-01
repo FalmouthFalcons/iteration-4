@@ -59,11 +59,11 @@ group :development do
   gem 'paperclip', '~> 5.1'
 end
 
-group :production do
-  gem 'pg', '0.20.0'
-  gem 'aws-sdk', '~> 2.3'
-  gem 'paperclip'
-end
+# group :production do
+#   gem 'pg', '0.20.0'
+#   gem 'aws-sdk', '~> 2.3'
+#   gem 'paperclip'
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
