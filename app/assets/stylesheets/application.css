@@ -18,6 +18,7 @@ body {
     font-family: Roboto;
 }
 
+
 .centered {
     position: absolute;
     top: 50%;
@@ -118,4 +119,9 @@ td {
 th {
     padding: 0px 16px 0px 0px;
     text-align: left;
+}
+
+.border_show {
+    border-width: thick;
+    border-radius: 12px;
 }
