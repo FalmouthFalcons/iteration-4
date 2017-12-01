@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Product Types</h1>
+  <br>
+  <%= link_to 'Back', url_for(:back) %>
+  <br>
+  <br>
+  <table>
+  <tr>
+      <th>Product Type</th>
+  </tr>
+  <%= @product_types.product_type %>
+  <% @product_by_category.product_types.products%>
+
+  </table>
+</div>
