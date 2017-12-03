@@ -1,6 +1,8 @@
 <div class="container">
 <br>
 <h1>Shopping Cart <%= image_tag('cart.png', :class => "cart")%> </h1> 
+<h6 class="usernmae"> Welcome, <%= @user.email %> </h6>
+
 <button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button>
 <hr>
 <table class="order_rows">

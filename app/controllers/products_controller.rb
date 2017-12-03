@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
       # gets last submission at top
       @product = Product.all.order("created_at DESC" )
       end
+      @user = User.find(session[:user_id])
   end
 
 
@@ -16,6 +17,8 @@ class ProductsController < ApplicationController
         @products = Product.all
         # gets number of items in each category for show page
         @products_count = Product.group(:product_type_id).count(:product_type_id)
+        @user = User.find(session[:user_id])
+        
   end
 
   def my_products
@@ -29,6 +32,8 @@ class ProductsController < ApplicationController
   def new
       @product = Product.new
       @products = Product.all
+      @user = User.find(session[:user_id])
+      
   end
 
   # "create" lets you take in new params and save them to database.

@@ -2,6 +2,8 @@
 <br>
 
 <h1> My Products:</h1>
+<h6 class="usernmae"> Welcome, <%= @user.email %> </h6>
+
 <p><button type="button" class="btn-default"><%= link_to 'Back', url_for(:back) %></button></p>
 
 <h4>All of your products for sale:</h4>
@@ -26,7 +28,7 @@
     <th class="order_rows">Price </th>
     <th class="order_rows">Type </th>
     <th class="order_rows">Local Delivery? </th>
-    <th class="order_rows">Qty Available </th>
+    <th class="order_rows">Qty </th>
     <th class="order_rows">Active Listing? </th>
     <th class="order_rows">Image </th>
     <th class="order_rows">Details </th>

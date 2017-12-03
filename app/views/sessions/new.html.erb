@@ -1,18 +1,23 @@
 <div class="container">
 <br>
-<h1>Log In</h1>
+<%= image_tag('store.jpg', style: "height: 600px; width: 100%") %>
+<h1 align="center">Falmouth Falcons-Buy and Sell Store</h1>
 
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </div>
-  <hr>
-  <div class="actions"><%= submit_tag "Log In" %></div>
-<% end %>
+<div class="centered">
 
+  <h1>Log In</h1>
+
+  <%= form_tag sessions_path do %>
+    <div class="field">
+     <h3 class="white"> <%= label_tag :email %><br/></h3>
+      <%= text_field_tag :email, params[:email] %>
+    </div>
+    <div class="field">
+      <h3 class="white"><%= label_tag :password %><br /></h3>
+      <%= password_field_tag :password %>
+    </div>
+    <hr>
+    <div class="actions"><%= submit_tag "Log In", class: "btn, btn-primary" %></div>
+  <% end %>
+  </div>
 </div>

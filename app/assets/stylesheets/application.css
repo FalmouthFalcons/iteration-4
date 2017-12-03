@@ -38,10 +38,16 @@ body {
 }
 
 .small_image {
-    width: 55px;
-    height: 55px;
+    width: 136px;
+    height: 135px;
     border: 1px solid black;
     margin: 2px;
+}
+
+.usernmae {
+    align-content: right;
+    color: orange;
+    
 }
 
 table tr:nth-child(even) td{

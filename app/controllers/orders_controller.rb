@@ -55,7 +55,8 @@ class OrdersController < ApplicationController
   # pick payment type
   def place_order
       @payment_types = PaymentType.where(customer_id: session[:user_id] )
-
+      @user = User.find(session[:user_id])
+      
   end
 
   # order confirmation page with details
