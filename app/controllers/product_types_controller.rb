@@ -14,7 +14,7 @@ class ProductTypesController < ApplicationController
   end
 
   def show
-      @product_types = ProductType.find(params[:id])
+      @product_type = ProductType.find(params[:id])
   end
 
   def new

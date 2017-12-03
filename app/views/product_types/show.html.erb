@@ -5,11 +5,21 @@
   <br>
   <br>
   <table>
-  <tr>
-      <th>Product Type</th>
-  </tr>
-  <%= @product_types.product_type %>
-  <% @product_by_category.product_types.products%>
-
+    <tr>
+      <th>Product Type Category</th>
+      <th>Product Titles</th>
+      <th>Inventory</th>
+    </tr>
+    <tr>
+      <td>
+        <%= @product_type.category %>
+        <% @product_type.products.each do |product| %>
+          <td><%= link_to product[:title], product_path(product) %></td>
+          <td>Remaining Inventory: <%= product[:quantity] %> | Price: <%= number_to_currency(product[:price]) %></td>
+        <% end %>
+      </td>
+    </tr>
   </table>
 </div>
+
+<%# Then a list of all products in that category will be displayed, with title, quantity, and price/unit %>
