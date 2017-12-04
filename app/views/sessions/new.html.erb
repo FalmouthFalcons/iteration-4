@@ -5,15 +5,15 @@
 
 <div class="centered">
 
-  <h1>Log In</h1>
+  <h1 class="white">Log In</h1>
 
   <%= form_tag sessions_path do %>
-    <div class="field">
-     <h3 class="white"> <%= label_tag :email %><br/></h3>
+     <div class="field">
+     <h6 class="white"> <%= label_tag :email %><br/></h6>
       <%= text_field_tag :email, params[:email] %>
     </div>
     <div class="field">
-      <h3 class="white"><%= label_tag :password %><br /></h3>
+      <h6 class="white"><%= label_tag :password %><br /></h6>
       <%= password_field_tag :password %>
     </div>
     <hr>
