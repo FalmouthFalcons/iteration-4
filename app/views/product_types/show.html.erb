@@ -14,8 +14,14 @@
       <td>
         <%= @product_type.category %>
         <% @product_type.products.each do |product| %>
+        <% if @product_type.products.each.count > 1 %>
+          <tr>
+          <td>
           <td><%= link_to product[:title], product_path(product) %></td>
           <td>Remaining Inventory: <%= product[:quantity] %> | Price: <%= number_to_currency(product[:price]) %></td>
+          </td>
+          </tr>
+          <% end %>
         <% end %>
       </td>
     </tr>
