@@ -77,3 +77,12 @@ Rails, like Angular, has many built-in [helper tags and filters](http://guides.r
 ### Assets
 
 [The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+
+
+Deployment Instructions:
+1. Clone Repo
+2. Run bundle install
+3. Run rails db:migrate
+4. Run rails server
+5. Then register and start uploading items for sale.
+6. Have fun.
