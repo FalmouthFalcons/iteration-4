@@ -1,5 +1,14 @@
-# iteration-3
+# iteration-3-4-Of-Bangazon-Falmouth-Falcons-Store
 # Building the First Version of the Bangazon Site
+
+![Alt text](bang1.png?raw=true "Title")
+
+![Alt text](bang4.png?raw=true "Title")
+
+![Alt text](bang2.png?raw=true "Title")
+
+![Alt text](bang3.png?raw=true "Title")
+
 
 ## Learning Objectives
 
