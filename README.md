@@ -1,5 +1,8 @@
 # iteration-3-4-Of-Bangazon-Falmouth-Falcons-Store
 # Group Project at Nashville Software School
+### Team Members: *Adam White, *Jasmine Quach, Jim Vickery, Clay Massie, Malcolm Ford.
+#### * Denotes Team Leads.
+
 
 ![Alt text](bang1.png?raw=true "Title")
 ----------------------------------------
