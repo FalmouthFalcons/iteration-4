@@ -16,7 +16,7 @@
 ----------------------------------------
 
 ### Requirements:
-Ruby on Rails 5, PostGreSQL.
+Ruby on Rails 5 or later, Ruby 2.4 or later.
 
 ## Deployment Instructions:
 
