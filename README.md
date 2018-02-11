@@ -84,18 +84,22 @@ Rails, like Angular, has many built-in [helper tags and filters](http://guides.r
 ```
 1. Clone Repo
 ```
-2. In terminal window type:
+2. CD into repo: in terminal window type:
+```
+cd iteration-4
+```
+3. Install gems: In terminal window type:
 ```
  bundle install
 ```
-3. In terminal window type
+4. In terminal window type
 ```
 rails db:migrate
  ```
-4. In terminal window type:
+5. In terminal window type:
 ```
  rails server
  ```
-5. Then register and start uploading items for sale.
+6. Then register and start uploading items for sale.
 
-6. Have fun.
+7. Have fun.
