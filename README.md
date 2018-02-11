@@ -94,11 +94,11 @@ cd iteration-4
 ```
  bundle install
 ```
-4. In terminal window type
+4. Create the Database: In terminal window type
 ```
 rails db:migrate
  ```
-5. Create the Database: In terminal window type:
+5. Start the Rails Server: In terminal window type:
 ```
  rails server
  ```
