@@ -80,9 +80,21 @@ Rails, like Angular, has many built-in [helper tags and filters](http://guides.r
 
 
 Deployment Instructions:
+```
 1. Clone Repo
-2. Run bundle install
-3. Run rails db:migrate
-4. Run rails server
+```
+2. In terminal window type:
+```
+ bundle install
+```
+3. In terminal window type
+```
+rails db:migrate
+ ```
+4. In terminal window type:
+```
+ rails server
+ ```
 5. Then register and start uploading items for sale.
+
 6. Have fun.
