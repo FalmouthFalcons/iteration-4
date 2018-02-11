@@ -79,7 +79,8 @@ Rails, like Angular, has many built-in [helper tags and filters](http://guides.r
 [The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
 
 
-Deployment Instructions:
+## Deployment Instructions:
+
 ```
 1. Clone Repo
 ```
