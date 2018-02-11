@@ -78,6 +78,8 @@ Rails, like Angular, has many built-in [helper tags and filters](http://guides.r
 
 [The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
 
+## Requirements:
+Ruby on Rails 5, PostGreSQL.
 
 ## Deployment Instructions:
 
@@ -96,7 +98,7 @@ cd iteration-4
 ```
 rails db:migrate
  ```
-5. In terminal window type:
+5. Create the Database: In terminal window type:
 ```
  rails server
  ```
