@@ -23,22 +23,29 @@ Ruby on Rails 5 or later, Ruby 2.4 or later.
 ```
 1. Clone Repo
 ```
-2. CD into repo: in terminal window type:
+2. CD into repo: in the terminal window type:
 ```
 cd iteration-4
 ```
-3. Install gems: In terminal window type:
+3. Install gems: in the terminal window type:
 ```
  bundle install
 ```
-4. Create the Database: In terminal window type
+4. Create the Database: in terminal window type:
 ```
 rails db:migrate
  ```
-5. Start the Rails Server: In terminal window type:
+5. Seed the Database: in the terminal window type:
+```
+rails db:seed
+```
+
+6. Start the Rails Server: in terminal window type:
 ```
  rails server
  ```
-6. Then register and start uploading items for sale.
+ ```
+7. Then register and start uploading items for sale.
+```
 
-7. Have fun.
+8. Have fun.
