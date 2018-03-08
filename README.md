@@ -1,5 +1,7 @@
-# iteration-3-4-Of-Bangazon-Falmouth-Falcons-Store
-# Group Project at Nashville Software School
+# iterations 3 and 4 Of Bangazon Group Project 
+# Group Project at Nashville Software School (Cohort 21) with a team known as Falmouth Falcons.
+### This project was built with Ruby on Rails 5, Ruby 2.4, and SQLite.
+
 ### Team Members: *Adam White, **Jasmine Quach, Jim Vickery, Clay Massie, Malcolm Ford.
 #### *Team Lead Iteration 3, **Team Lead Iteration 4.
 
