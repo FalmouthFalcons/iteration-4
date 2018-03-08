@@ -1,5 +1,5 @@
 # iterations 3 and 4 Of Bangazon Group Project 
-# Group Project at Nashville Software School (Cohort 21) with a team known as Falmouth Falcons.
+## Group Project at Nashville Software School (Cohort 21) with a team known as Falmouth Falcons.
 ### This project was built with Ruby on Rails 5, Ruby 2.4, and SQLite.
 
 ### Team Members: *Adam White, **Jasmine Quach, Jim Vickery, Clay Massie, Malcolm Ford.
@@ -18,7 +18,7 @@
 ----------------------------------------
 
 ### Requirements:
-Ruby on Rails 5 or later, Ruby 2.4 or later.
+Ruby on Rails 5 or later, Ruby 2.4 or later, and SQLite.
 
 ## Deployment Instructions:
 
